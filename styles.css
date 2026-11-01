@@ -47,6 +47,7 @@ body {
 }
 html, body { overflow-x: clip; }
 img, video { display: block; max-width: 100%; }
+img { height: auto; }
 a { color: inherit; }
 button { font: inherit; cursor: pointer; }
 h1, h2, h3, h4 { font-family: var(--f-head); line-height: 1.08; margin: 0 0 .5em; letter-spacing: .01em; }
@@ -279,9 +280,9 @@ section { position: relative; }
 
 .flyer { color: #dbe5ef; }
 .flyer__btn { display: block; width: 100%; padding: 0; border: 0; background: none; border-radius: 12px; overflow: hidden; position: relative; box-shadow: var(--shadow); }
-.flyer__btn img { width: 100%; transition: transform .5s; }
+.flyer__btn img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; transition: transform .5s; }
 .flyer__btn:hover img { transform: scale(1.04); }
-.flyer__btn span { position: absolute; bottom: 12px; left: 12px; background: rgba(15,12,10,.85); color: var(--bone); font: 600 .78rem var(--f-head); letter-spacing: .15em; text-transform: uppercase; padding: .55em .9em; border-radius: 999px; }
+.flyer__btn span { position: absolute; top: 12px; right: 12px; background: rgba(15,12,10,.85); color: var(--bone); font: 600 .78rem var(--f-head); letter-spacing: .15em; text-transform: uppercase; padding: .55em .9em; border-radius: 999px; }
 .checks { list-style: none; padding: 0; margin: 22px 0 12px; display: grid; gap: 8px; }
 .checks li::before { content: "✓ "; color: var(--gold); font-weight: 700; }
 .fine { font-size: .82rem; color: #93a4b6; }
@@ -465,7 +466,7 @@ section { position: relative; }
 .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(8,6,5,.95); display: grid; place-items: center; padding: 60px 16px; }
 .lightbox[hidden] { display: none; }
 .lightbox figure { margin: 0; max-width: min(1100px, 100%); text-align: center; }
-.lightbox img { max-height: 78vh; width: auto; margin-inline: auto; border-radius: 10px; }
+.lightbox img { max-height: 78vh; width: auto; height: auto; object-fit: contain; margin-inline: auto; border-radius: 10px; }
 .lightbox figcaption { margin-top: 14px; font: 500 .9rem var(--f-head); letter-spacing: .12em; text-transform: uppercase; color: var(--bone-dim); }
 .lightbox__close { position: absolute; top: 16px; right: 16px; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--bone); font-size: 1.8rem; line-height: 1; }
 .lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line); background: rgba(15,12,10,.6); color: var(--bone); font-size: 2rem; line-height: 1; }
