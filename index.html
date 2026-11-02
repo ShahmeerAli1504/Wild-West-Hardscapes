@@ -55,7 +55,7 @@
         <a href="#services">Services</a>
         <a href="#specials">Winter Specials</a>
         <a href="#work">Our Work</a>
-        <a href="#reels">Reels</a>
+        <a href="#reels">Videos</a>
         <a href="#process">Process</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -71,7 +71,7 @@
       <a href="#services">Services</a>
       <a href="#specials">Winter Specials</a>
       <a href="#work">Our Work</a>
-      <a href="#reels">Reels</a>
+      <a href="#reels">Videos</a>
       <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn--rust">Get a Free Estimate</a>
@@ -239,6 +239,7 @@
           <button class="chip is-active" data-filter="all">All</button>
           <button class="chip" data-filter="patios">Patios</button>
           <button class="chip" data-filter="fire">Fire Pits</button>
+          <button class="chip" data-filter="driveways">Driveways</button>
           <button class="chip" data-filter="walls">Walls</button>
           <button class="chip" data-filter="turf">Turf &amp; Lawn</button>
           <button class="chip" data-filter="paths">Walkways</button>
@@ -286,6 +287,26 @@
             <figcaption><b>Cambridge Cobble + Free Fire Pit</b>Patios, borders &amp; fire features</figcaption>
           </figure>
         </div>
+      </div>
+
+      <div class="wrap vlib" id="videos">
+        <div class="vlib__head reveal">
+          <div>
+            <p class="eyebrow eyebrow--light"><span>No. 04b</span> Project Video Library</p>
+            <h2>Walk through <em>real jobs.</em></h2>
+          </div>
+          <p>Driveways, patios, walls, turf and lighting from start to finish. Tap any video to watch it with sound.</p>
+        </div>
+        <div class="filters vfilters" role="group" aria-label="Filter videos">
+          <button class="chip is-active" data-vfilter="all">All</button>
+          <button class="chip" data-vfilter="patios">Patios</button>
+          <button class="chip" data-vfilter="driveways">Driveways</button>
+          <button class="chip" data-vfilter="walls">Walls</button>
+          <button class="chip" data-vfilter="turf">Turf</button>
+          <button class="chip" data-vfilter="lighting">Lighting</button>
+          <button class="chip" data-vfilter="process">In Progress</button>
+        </div>
+        <div class="vgrid" data-videos></div>
       </div>
     </section>
 
@@ -535,6 +556,19 @@
       <figcaption></figcaption>
     </figure>
     <button class="lightbox__nav lightbox__next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Video player -->
+  <div class="vplayer" hidden role="dialog" aria-modal="true" aria-label="Project video">
+    <div class="vplayer__inner">
+      <button class="vplayer__close" aria-label="Close video">×</button>
+      <video controls playsinline preload="metadata"></video>
+      <div class="vplayer__meta">
+        <h3 class="vplayer__title"></h3>
+        <p class="vplayer__desc"></p>
+        <a href="#contact" class="btn btn--rust btn--sm" data-close-player>Get a free estimate</a>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

@@ -36,25 +36,25 @@ const ICONS = {
 const SERVICES = [
   {
     id: "patios", name: "Paver Patios", short: "Cambridge Cobble & custom layouts", icon: "pavers",
-    img: "assets/img/mountain-patio.jpg",
+    img: "assets/img/mountain-patio.jpg", video: "pergola-patio-steps-seat-wall",
     text: "Custom paver patios made for entertaining — clean curves, solid borders and a color blend you choose. We feature premium Cambridge Cobble pavers built for Northern Nevada seasons.",
     points: ["Cambridge Cobble pavers", "Your choice of color", "Curved & custom borders", "Steps & seat walls", "Proper compacted base", "Patio extensions"],
   },
   {
     id: "driveways", name: "Driveways & Walkways", short: "Driveways, sidewalks & paths", icon: "driveway",
-    img: "assets/img/cambridge-path-turf.jpg",
+    img: "assets/img/mountain-paver-driveway-curve.jpg", video: "paver-driveway-crew-at-work",
     text: "Make a first impression from the street. Paver driveways, sidewalks and garden paths that connect every part of your property — and hold up to daily use.",
     points: ["Paver driveways", "Sidewalks & entries", "Garden & side-yard paths", "Driveway extensions", "Borders & edging", "Durable base prep"],
   },
   {
     id: "walls", name: "Retaining Walls", short: "Block, seat & tiered walls", icon: "wall",
-    img: "assets/img/patio-firepit.jpg",
+    img: "assets/img/tiered-retaining-walls-gravel.jpg", video: "patio-seat-walls-turf-build",
     text: "Turn slopes into usable space. Retaining walls, seat walls and tiered terraces that look great and keep your yard where it belongs.",
     points: ["Retaining walls", "Seat walls", "Tiered terraces", "Planter walls", "Wall caps", "Slope solutions"],
   },
   {
     id: "fire", name: "Fire Pits", short: "Gather around the glow", icon: "fire",
-    img: "assets/img/fire-pit-seat-wall.jpg",
+    img: "assets/img/fire-pit-seat-wall.jpg", video: "backyard-patio-turf-fire-pit",
     text: "The centerpiece of any backyard. Paver fire pits and fire features designed to match your patio, with seating walls for nights with family and friends.",
     points: ["Round & square fire pits", "Matching seat walls", "Fire tables & features", "Integrated into patios", "Ask about the FREE fire pit special", "Built to last"],
   },
@@ -66,7 +66,7 @@ const SERVICES = [
   },
   {
     id: "turf", name: "Artificial Turf", short: "Green all year, no mowing", icon: "turf",
-    img: "assets/img/turf-paver-edge.jpg",
+    img: "assets/img/turf-lawn-retaining-wall.jpg", video: "turf-stepper-path-day-to-night",
     text: "A lush lawn without the water bill or the mowing. Artificial turf installed with clean paver borders for a crisp, low-maintenance yard.",
     points: ["Artificial turf installs", "Paver-edged lawns", "Pet & kid friendly areas", "Low water use", "Clean borders", "Lawn areas & side yards"],
   },
@@ -78,19 +78,19 @@ const SERVICES = [
   },
   {
     id: "lighting", name: "Lights in Pavers", short: "Glow built into the ground", icon: "light",
-    img: null,
+    img: "assets/img/poster-lights-in-pavers-night.jpg", video: "lights-in-pavers-night",
     text: "Lighting built directly into your pavers, steps and walls — beautiful at night and safer underfoot. Ask about 6 free paver lights with our winter upgrade.",
     points: ["Paver lights", "Step & wall lights", "Path lighting", "Patio ambiance", "Added nighttime safety", "Ask about 6 FREE lights"],
   },
   {
     id: "xeriscape", name: "Xeriscape", short: "Rock & drought-smart design", icon: "xeri",
-    img: "assets/img/backyard-patio-firepit.jpg",
+    img: "assets/img/backyard-patio-firepit.jpg", video: "front-yard-pavers-rock-irrigation",
     text: "High-desert landscaping that looks good and saves water. Rock, boulders and drought-tolerant design that pairs perfectly with your hardscape.",
     points: ["Decorative rock", "Boulders & accents", "Drought-tolerant layouts", "Low water use", "Weed barrier & edging", "Pairs with pavers"],
   },
   {
     id: "remodels", name: "Complete Remodels", short: "Full backyard transformations", icon: "remodel",
-    img: "assets/img/patio-fire-table-turf.jpg",
+    img: "assets/img/patio-fire-table-turf.jpg", video: "seat-walls-pillars-water-feature",
     text: "Patio, walls, turf, fire features and lighting — all from one crew. We transform the whole backyard into the space you've always wanted.",
     points: ["Full backyard makeovers", "Outdoor living spaces", "Patio + lawn + fire combos", "Remodels of existing yards", "One crew start to finish", "Winter Special eligible"],
   },
@@ -98,6 +98,13 @@ const SERVICES = [
 
 /* ---------- Gallery data ---------- */
 const GALLERY = [
+  { src: "assets/img/mountain-paver-driveway-curve.jpg", w: 1200, h: 1600, cap: "Paver driveway with curved border — mountain home", tags: ["driveways", "paths"] },
+  { src: "assets/img/paver-patio-turf-two-story.jpg", w: 1000, h: 1000, cap: "Gray paver patio, turf & seat wall", tags: ["patios", "turf", "walls"] },
+  { src: "assets/img/tiered-retaining-walls-gravel.jpg", w: 1600, h: 1200, cap: "Tiered retaining walls & gravel terraces", tags: ["walls"] },
+  { src: "assets/img/turf-lawn-retaining-wall.jpg", w: 1200, h: 1600, cap: "Turf lawn with paver border & retaining wall", tags: ["turf", "walls", "paths"] },
+  { src: "assets/img/retaining-wall-low-angle.jpg", w: 1000, h: 1000, cap: "Block retaining wall with rock & gravel", tags: ["walls"] },
+  { src: "assets/img/retaining-wall-paver-pad.jpg", w: 1600, h: 1200, cap: "Retaining wall wrapped around a paver pad", tags: ["walls", "patios"] },
+  { src: "assets/img/mountain-paver-driveway.jpg", w: 1200, h: 1600, cap: "Wide paver driveway with mountain views", tags: ["driveways"] },
   { src: "assets/img/patio-firepit.jpg", w: 900, h: 675, full: "assets/img/patio-firepit-hero.jpg", cap: "Paver patio, fire pit & retaining walls", tags: ["patios", "fire", "walls"] },
   { src: "assets/img/fire-pit-seat-wall.jpg", w: 720, h: 960, cap: "Fire pit with seat walls", tags: ["fire", "walls", "patios"] },
   { src: "assets/img/cambridge-path-turf.jpg", w: 716, h: 1040, cap: "Curved paver path & turf", tags: ["paths", "turf"] },
@@ -110,6 +117,22 @@ const GALLERY = [
   { src: "assets/img/paver-patio-hot-tub.jpg", w: 720, h: 960, cap: "Patio for hot tub & dining", tags: ["patios"] },
   { src: "assets/img/turf-gravel-pavers.jpg", w: 720, h: 960, cap: "Lawn, gravel & paver details", tags: ["turf", "patios"] },
   { src: "assets/img/side-yard-turf.jpg", w: 720, h: 900, cap: "Side yard paver path & lawn", tags: ["paths", "turf"] },
+];
+
+/* ---------- Project videos ---------- */
+const VIDEOS = [
+  { id: "lights-in-pavers-night", title: "Lights in Pavers After Dark", desc: "Walkway and step lights built right into the pavers, plus wall lighting — the whole entry glows at night.", tags: ["lighting", "paths"], dur: "0:56", orient: "port" },
+  { id: "paver-driveway-crew-at-work", title: "Paver Driveway — Crew at Work", desc: "Our crew finishing a full paver driveway, from the street to the garage.", tags: ["driveways", "process"], dur: "1:04", orient: "port" },
+  { id: "pergola-patio-steps-seat-wall", title: "Patio, Steps & Seat Wall", desc: "A backyard paver patio with steps off the house, a seat wall and room for the grill and pergola.", tags: ["patios", "walls"], dur: "0:45", orient: "port" },
+  { id: "seat-walls-pillars-water-feature", title: "Seat Walls, Pillars & Rock Accent", desc: "Seat walls, block pillars and a basalt-column rock bed — just waiting on the granite caps.", tags: ["walls", "patios", "process"], dur: "0:57", orient: "port" },
+  { id: "backyard-patio-turf-fire-pit", title: "Backyard Makeover — Patio, Turf & Fire Pit", desc: "Pavers wrapping the house, a seat wall, fire pit and fresh green lawn.", tags: ["patios", "turf", "fire"], dur: "0:35", orient: "port" },
+  { id: "turf-stepper-path-day-to-night", title: "Turf, Stepper Path & Lighting — Day to Night", desc: "A side-yard stepper path, artificial turf and border lighting, shown in daylight and after dark.", tags: ["turf", "lighting", "paths"], dur: "1:32", orient: "square" },
+  { id: "front-yard-pavers-rock-irrigation", title: "Front Yard Pavers, Rock & Irrigation", desc: "Completely done with the front of this home — paver walkways, added rock and irrigation.", tags: ["xeriscape", "paths"], dur: "0:59", orient: "port" },
+  { id: "patio-turf-stepping-stones", title: "Patio, Turf & Stepping Stones", desc: "Paver patio, side-yard pavers and stepping stones set into new artificial turf.", tags: ["patios", "turf", "paths"], dur: "0:23", orient: "port" },
+  { id: "patio-seat-walls-turf-build", title: "Patio & Seat Wall Build", desc: "From bare concrete to a paver patio with block seat walls, a fire feature and turf.", tags: ["patios", "walls", "process"], dur: "0:19", orient: "port" },
+  { id: "flagstone-side-yard-patio", title: "Flagstone Side Yard & Patio", desc: "Natural flagstone running down the side yard into a shaded patio.", tags: ["patios", "paths"], dur: "0:16", orient: "land" },
+  { id: "turf-border-lights-night", title: "Turf Border Lights at Night", desc: "A row of lights built into the paver border lighting up the lawn at night.", tags: ["lighting", "turf"], dur: "0:18", orient: "port" },
+  { id: "mountain-driveway-walkthrough", title: "Mountain-View Driveway Walkthrough", desc: "A quick walk across a finished paver driveway with rock landscaping and mountain views.", tags: ["driveways", "xeriscape"], dur: "0:07", orient: "port" },
 ];
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -177,7 +200,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
         <ul>${s.points.map((p) => `<li>${p}</li>`).join("")}</ul>
         <div class="svc__actions">
           <a href="#contact" class="btn btn--rust" data-pick="${s.name}">Get an estimate for ${s.name}</a>
-          <a href="tel:${CONFIG.PHONE}" class="btn btn--ghost">Call ${CONFIG.PHONE_DISPLAY}</a>
+          ${s.video ? `<button type="button" class="btn btn--ghost" data-play="${s.video}">▶ Watch the video</button>` : `<a href="tel:${CONFIG.PHONE}" class="btn btn--ghost">Call ${CONFIG.PHONE_DISPLAY}</a>`}
         </div>
       </div>`;
     panel.setAttribute("aria-labelledby", `tab-${s.id}`);
@@ -264,7 +287,7 @@ const Lightbox = (() => {
 
 /* ---------- Reels: autoplay in view, tap for sound ---------- */
 (() => {
-  const vids = $$("video");
+  const vids = $$(".phone video");
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       const v = e.target;
@@ -286,6 +309,81 @@ const Lightbox = (() => {
     };
     ph.addEventListener("click", toggle);
   });
+})();
+
+/* ---------- Video library + player ---------- */
+const Player = (() => {
+  const box = $(".vplayer");
+  const vid = $("video", box);
+  const title = $(".vplayer__title", box);
+  const desc = $(".vplayer__desc", box);
+  let lastFocus = null;
+  const open = (id) => {
+    const v = VIDEOS.find((x) => x.id === id);
+    if (!v) return;
+    lastFocus = document.activeElement;
+    // pause anything playing on the page
+    $$("video").forEach((o) => { if (o !== vid) o.pause(); });
+    vid.poster = `assets/img/poster-${v.id}.jpg`;
+    vid.src = `assets/video/${v.id}.mp4`;
+    box.dataset.orient = v.orient;
+    title.textContent = v.title;
+    desc.textContent = v.desc;
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+    vid.play().catch(() => {});
+    $(".vplayer__close", box).focus();
+  };
+  const close = () => {
+    vid.pause(); vid.removeAttribute("src"); vid.load();
+    box.hidden = true; document.body.style.overflow = "";
+    lastFocus && lastFocus.focus();
+  };
+  $(".vplayer__close", box).addEventListener("click", close);
+  $("[data-close-player]", box).addEventListener("click", () => { lastFocus = null; close(); });
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+  document.addEventListener("keydown", (e) => { if (!box.hidden && e.key === "Escape") close(); });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-play]");
+    if (b) { e.preventDefault(); open(b.dataset.play); }
+  });
+  return { open };
+})();
+
+(() => {
+  const grid = $("[data-videos]");
+  if (!grid) return;
+  const LABEL = { patios: "Patios", driveways: "Driveways", walls: "Walls", turf: "Turf", lighting: "Lighting", fire: "Fire Pits", paths: "Walkways", xeriscape: "Rock & Xeriscape", process: "In Progress" };
+  grid.innerHTML = VIDEOS.map((v) => `
+    <article class="vcard reveal" data-tags="${v.tags.join(" ")}">
+      <button class="vcard__media" data-play="${v.id}" aria-label="Play video: ${v.title}">
+        <img src="assets/img/poster-${v.id}.jpg" alt="" loading="lazy" />
+        <span class="vcard__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vcard__dur">${v.dur}</span>
+      </button>
+      <div class="vcard__body">
+        <h3>${v.title}</h3>
+        <p>${v.desc}</p>
+        <ul class="vcard__tags">${v.tags.map((t) => `<li>${LABEL[t] || t}</li>`).join("")}</ul>
+      </div>
+    </article>`).join("");
+
+  // hover preview on desktop: swap in the muted video
+  grid.addEventListener("pointerenter", (e) => {
+    const m = e.target.closest && e.target.closest(".vcard__media");
+    if (!m || e.pointerType !== "mouse" || m.querySelector("video")) return;
+    const v = document.createElement("video");
+    Object.assign(v, { src: `assets/video/${m.dataset.play}.mp4`, muted: true, loop: true, playsInline: true, autoplay: true });
+    v.setAttribute("aria-hidden", "true");
+    m.appendChild(v);
+    m.addEventListener("pointerleave", () => v.remove(), { once: true });
+  }, true);
+
+  $$(".vfilters .chip").forEach((chip) => chip.addEventListener("click", () => {
+    $$(".vfilters .chip").forEach((c) => c.classList.toggle("is-active", c === chip));
+    const f = chip.dataset.vfilter;
+    $$(".vcard", grid).forEach((c) => c.classList.toggle("is-hidden", f !== "all" && !c.dataset.tags.split(" ").includes(f)));
+  }));
 })();
 
 /* ---------- Contact form ---------- */

@@ -7,10 +7,11 @@ Static site: plain HTML, CSS and JS with no build step. It deploys to Vercel as-
 ## Sections
 - Hero with a reel in a phone frame and the fire pit patio photo
 - Scrolling services ticker and three promises (Quality / Reliable / Built to Last)
-- **Services**: 10 services you can click through. Each one's "Get an estimate" button ticks that service in the form.
+- **Services**: 10 services you can click through. Each one's "Get an estimate" button ticks that service in the form, and 8 of them have a "Watch the video" button that plays a matching project video.
 - **Winter Specials**: the $13k+ Free Upgrade and the Free Fire Pit Giveaway as two posters, plus the flyer, which opens larger when clicked. The "Reserve" buttons fill in the form for you.
-- **Recent Work**: filterable gallery with a lightbox
+- **Recent Work**: a gallery of 19 photos with a lightbox. It can be filtered by patios, fire pits, driveways, walls, turf and walkways.
 - **Reels**: two vertical reels that play when scrolled into view and turn sound on when tapped, plus Instagram, TikTok and Facebook links
+- **Project Video Library**: 12 project videos with a description, length and tags on each. They can be filtered by Patios, Driveways, Walls, Turf, Lighting and In Progress, preview on hover, and open in a player with sound.
 - Process steps, service area, license card and FAQ
 - **Contact / Free Estimate form**: service chips, budget, timeline, Winter Special checkbox and preferred contact method
 - Call / Text / Estimate bar fixed to the bottom of the screen on mobile
