@@ -510,3 +510,13 @@ const Player = (() => {
 })();
 
 $("[data-year]").textContent = new Date().getFullYear();
+
+/* ---------- Logo / #top links scroll back to the very top ---------- */
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href="#top"]');
+  if (!a) return;
+  e.preventDefault();
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+});
