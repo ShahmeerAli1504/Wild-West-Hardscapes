@@ -205,6 +205,12 @@ section { position: relative; }
 .story__badge { position: absolute; left: -18px; bottom: 32px; background: var(--parch); color: var(--parch-ink); padding: 14px 20px; border-radius: 10px; box-shadow: var(--shadow); transform: rotate(-3deg); }
 .story__badge span { display: block; font: 600 .72rem var(--f-head); letter-spacing: .22em; text-transform: uppercase; color: var(--saddle); }
 .story__badge strong { font: 400 1.6rem/1.1 var(--f-west); color: var(--rust-d); }
+/* Two-photo layout: sister + brother */
+.story__photo--duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.story__photo--duo .story__frame { aspect-ratio: 3 / 4; }
+.story__photo--duo .story__frame--second { margin-top: 56px; }
+.story__photo--duo .story__frame--second img { object-position: center 15%; }
+.story__photo--duo::before { inset: 30px -18px -18px 30px; }
 .story__lead { font-size: 1.18rem; color: var(--bone); }
 .story__copy > p:not(.eyebrow):not(.story__lead) { color: var(--bone-dim); }
 .story__quote { margin: 28px 0; padding: 4px 0 4px 22px; border-left: 3px solid var(--gold); font: 500 1.35rem/1.4 var(--f-head); color: var(--gold); letter-spacing: .01em; }
@@ -223,6 +229,8 @@ section { position: relative; }
   .story__values li { border-right: 0; border-bottom: 1px solid var(--line); padding: 14px 4px; }
   .story__values li:last-child { border-bottom: 0; }
   .story__badge { left: -8px; }
+  .story__photo--duo { max-width: 520px; gap: 12px; }
+  .story__photo--duo .story__frame--second { margin-top: 36px; }
   .story__quote { font-size: 1.15rem; }
 }
 
