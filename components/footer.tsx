@@ -59,6 +59,18 @@ export function Footer() {
         <p>© <span>{new Date().getFullYear()}</span> Wild West Hardscapes LLC. All rights reserved.</p>
         <p>Licensed &amp; Insured · Nevada State Contractor License #0096054</p>
       </div>
+      <div className="wrap flex justify-center mt-[18px]">
+        <a
+          href="https://www.nexoradigital.live/"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-2 text-[#8d7c68] text-[.8rem] tracking-[.04em] hover:text-bone transition-colors"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/assets/img/nexora-logo.png" alt="Nexora Digital LLC logo" width={22} height={22} loading="lazy" className="w-[22px] h-[22px]" />
+          Powered by Nexora Digital LLC
+        </a>
+      </div>
     </footer>
   );
 }
