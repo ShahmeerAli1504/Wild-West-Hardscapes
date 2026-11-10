@@ -2,36 +2,66 @@
 
 Website for **Wild West Hardscapes LLC**, a hardscaping and outdoor living contractor in Reno / Northern Nevada (NV Lic. #0096054). Built by Nexora Digital.
 
-Static site: plain HTML, CSS and JS with no build step. It deploys to Vercel as-is.
+Full-stack **Next.js 16 (App Router) + Tailwind CSS v4 + TypeScript**. The estimate form posts to a Next.js API route that emails the request through **Gmail SMTP** (Nodemailer).
+
+## Run it
+
+```bash
+npm install
+cp .env.example .env.local   # then fill in the Gmail values
+npm run dev                  # http://localhost:3000
+```
+
+`npm run build && npm start` runs the production build.
+
+## Gmail SMTP setup (contact form)
+
+1. On the Gmail account that will send the emails, turn on **2-Step Verification**.
+2. Create an **App Password** at <https://myaccount.google.com/apppasswords> (Gmail will not accept the normal account password over SMTP).
+3. Put the values in `.env.local` (locally) and in **Vercel → Project → Settings → Environment Variables** (production):
+
+| Variable | Required | What it does |
+| --- | --- | --- |
+| `GMAIL_USER` | yes | Gmail address that sends the emails |
+| `GMAIL_APP_PASSWORD` | yes | The 16-character App Password (spaces are fine) |
+| `CONTACT_TO` | no | Where estimate requests are delivered (comma-separated). Defaults to `GMAIL_USER` |
+| `SEND_CONFIRMATION` | no | `true` (default) emails the customer a "we got your request" note when they give an email |
+| `NEXT_PUBLIC_SITE_URL` | no | Public URL, used for social share image links |
+
+What happens on submit:
+- The owner gets a branded email with every field; **Reply** goes straight to the customer's email.
+- The customer gets a short confirmation (if they entered an email and `SEND_CONFIRMATION` isn't `false`).
+- The server re-validates everything, ignores bots that fill the hidden honeypot field, and rate-limits each IP to 5 requests per 10 minutes.
+- If the Gmail variables aren't set yet, the form falls back to the old behavior: a pre-filled text message to 775-229-2991.
+
+## Project layout
+
+```
+app/
+  layout.tsx            fonts (Rye, Oswald, Barlow via next/font), SEO metadata, JSON-LD
+  page.tsx              page composition
+  globals.css           Tailwind theme: brand colors, fonts, animations, breakpoints
+  api/contact/route.ts  POST /api/contact → Gmail SMTP
+components/             one file per section + modals, shared state in site-provider.tsx
+lib/site-data.ts        services, gallery photos, videos, filters (edit content here)
+lib/mailer.ts           Nodemailer transport for smtp.gmail.com:465
+public/assets/          images and videos
+```
+
+Breakpoints use custom `upto-N:` variants (e.g. `upto-900:`) defined in `globals.css`. They match `@media (max-width: Npx)` exactly, so the layout is identical to the original static site at every width.
 
 ## Sections
 - Hero with a reel in a phone frame and the fire pit patio photo
 - Scrolling services ticker and three promises (Quality / Reliable / Built to Last)
-- **Services**: 10 services you can click through. Each one's "Get an estimate" button ticks that service in the form, and 8 of them have a "Watch the video" button that plays a matching project video.
-- **Winter Specials**: the $13k+ Free Upgrade and the Free Fire Pit Giveaway as two posters, plus the flyer, which opens larger when clicked. The "Reserve" buttons fill in the form for you.
-- **Recent Work**: a gallery of 19 photos with a lightbox. It can be filtered by patios, fire pits, driveways, walls, turf and walkways.
-- **Reels**: two vertical reels that play when scrolled into view and turn sound on when tapped, plus Instagram, TikTok and Facebook links
-- **Project Video Library**: 12 project videos with a description, length and tags on each. They can be filtered by Patios, Driveways, Walls, Turf, Lighting and In Progress, preview on hover, and open in a player with sound.
+- **Our Story** with the owners' photos
+- **Services**: 10 services you can click through. "Get an estimate" ticks that service in the form; 8 have a "Watch the video" button.
+- **Winter Specials**: the $13k+ Free Upgrade and the Free Fire Pit Giveaway posters, plus the flyer (opens larger). The buttons pre-fill the form.
+- **Recent Work**: 19 photos with filters and a lightbox
+- **Reels**: two vertical reels that play in view and unmute on tap, plus social links
+- **Project Video Library**: 12 videos with filters, hover preview and a player with sound
 - Process steps, service area, license card and FAQ
-- **Contact / Free Estimate form**: service chips, budget, timeline, Winter Special checkbox and preferred contact method
+- **Free Estimate form** → Gmail
 - Call / Text / Estimate bar fixed to the bottom of the screen on mobile
 
-## Connecting the contact form (client email)
-Open `script.js` and edit `CONFIG` at the top:
-
-```js
-const CONFIG = {
-  FORM_ENDPOINT: "",   // e.g. "https://formspree.io/f/abcd1234" or "https://api.web3forms.com/submit"
-  WEB3FORMS_KEY: "",   // only needed for Web3Forms
-  ...
-};
-```
-
-- **Formspree**: create a form that sends to the client's email, then paste its URL into `FORM_ENDPOINT`.
-- **Web3Forms**: set `FORM_ENDPOINT` to `https://api.web3forms.com/submit` and paste the access key.
-- **Custom**: point it at any endpoint that accepts a JSON POST, such as a Vercel function at `/api/contact`.
-
-While `FORM_ENDPOINT` is empty, the form still works. Submitting opens a text message to 775-229-2991 with all the project details already filled in.
-
 ## Deploy
-Import the repo in Vercel. Use framework preset **Other** and leave the build command empty.
+Import the repo in Vercel (framework preset **Next.js** is detected automatically), add the environment variables above, and deploy.
