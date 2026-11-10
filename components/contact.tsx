@@ -114,7 +114,7 @@ export function Contact() {
             <a className={btn("ghost")} href={`sms:${CONTACT.PHONE}`}>Send a text</a>
             <a className={btn("ghost")} href={CONTACT.INSTAGRAM} target="_blank" rel="noopener">DM on Instagram</a>
           </div>
-          <p className="mt-[26px]">Owner: <b>Alfonso Almaraz</b> · NV Lic. #0096054</p>
+          <p className="mt-[26px]">Call <b>Alfonso Almaraz</b> · NV Lic. #0096054</p>
         </div>
 
         <form

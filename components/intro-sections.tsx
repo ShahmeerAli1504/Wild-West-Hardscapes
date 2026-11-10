@@ -60,11 +60,11 @@ export function Story() {
         <figure className="reveal m-0 relative grid grid-cols-2 gap-[18px] items-start before:content-[''] before:absolute before:top-[30px] before:right-[-18px] before:bottom-[-18px] before:left-[30px] before:border-2 before:border-rust before:rounded-[14px] before:-z-1 upto-900:max-w-[420px] upto-900:mx-auto upto-900:w-[calc(100%_-_22px)] upto-520:max-w-[520px] upto-520:gap-3">
           <div className={frame}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/img/owner.jpg" alt="Wild West Hardscapes co-owner, smiling in a black blouse" width={1024} height={1024} loading="lazy" className="w-full h-full object-cover object-[center_20%]" />
+            <img src="/assets/img/owner.jpg" alt="Wild West Hardscapes family team member, smiling in a black blouse" width={1024} height={1024} loading="lazy" className="w-full h-full object-cover object-[center_20%]" />
           </div>
           <div className={`${frame} mt-14 upto-520:mt-9`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/img/brother.jpg" alt="Wild West Hardscapes co-owner, her brother, smiling in a black polo" width={1086} height={1448} loading="lazy" className="w-full h-full object-cover object-[center_15%]" />
+            <img src="/assets/img/brother.jpg" alt="Wild West Hardscapes family team member, her brother, smiling in a black polo" width={1086} height={1448} loading="lazy" className="w-full h-full object-cover object-[center_15%]" />
           </div>
           <figcaption className="absolute -left-[18px] bottom-8 bg-parch text-parch-ink py-3.5 px-5 rounded-[10px] shadow-deep rotate-[-3deg] upto-520:-left-2">
             <span className="block font-head font-semibold text-[.72rem] leading-[normal] tracking-[.22em] uppercase text-saddle">Born &amp; raised</span>
