@@ -76,13 +76,16 @@ export function Story() {
           <Eyebrow num="Est. Reno">Meet the Family</Eyebrow>
           <h2>Our <em>Story.</em></h2>
           <p className="text-[1.18rem] text-bone">
-            As a proud Nevadan, born and raised in Reno, Wild West Hardscapes is about so much more than building beautiful outdoor spaces. One of the biggest reasons I wanted to start this business was to work alongside my brother, because family has always meant everything to me.
+            As proud Nevadans, born and raised in Reno, Wild West Hardscapes is about so much more than creating beautiful outdoor spaces. As siblings, we started this business with one thing at the heart of it all: family.
           </p>
           <p className="text-bone-dim">
-            Together, we want to build more than a business. We want to create a strong foundation for our children, build generational wealth, and leave behind a legacy they can be proud of.
+            Together, we wanted to build something bigger than ourselves. A strong foundation for our children, an opportunity to create generational wealth, and a lasting legacy our families can be proud of.
+          </p>
+          <p className="text-bone-dim">
+            For us, Wild West Hardscapes isn&rsquo;t just a business. It&rsquo;s a dream we&rsquo;re building together, rooted in family, hard work, and the values we were raised with.
           </p>
           <blockquote className="my-7 mx-0 py-1 pr-0 pl-[22px] border-l-[3px] border-gold font-head font-medium text-[1.35rem] leading-[1.4] text-gold tracking-[.01em] upto-520:text-[1.15rem]">
-            Every project we take on is another step toward that dream, built with family, hard work, and heart.
+            Every project brings us one step closer to the legacy we hope to leave behind.
           </blockquote>
           <ul className="list-none mt-0 mb-8 p-0 grid grid-cols-3 border-y border-line upto-520:grid-cols-1">
             {VALUES.map((v) => (
