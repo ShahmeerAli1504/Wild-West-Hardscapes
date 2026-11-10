@@ -21,7 +21,7 @@ export function Ticker() {
 
 const PILLARS = [
   { n: "01", h: "Quality Work", p: "Clean cuts, tight joints and borders that hold their line — quality you can see the day we finish and years after." },
-  { n: "02", h: "Reliable Service", p: "Straight answers, a clear plan, and a crew that shows up. Call or text and talk directly with the owner, Alfonso." },
+  { n: "02", h: "Reliable Service", p: "Straight answers, a clear plan, and a crew that shows up. Call or text and talk directly to Alfonso." },
   { n: "03", h: "Built to Last", p: "Proper base prep and compaction made for Northern Nevada freeze-thaw winters and hot high-desert summers." },
 ];
 
